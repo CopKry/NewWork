@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>webbug</title>
+    <style>
+        body{
+            background-color: chartreuse;
+        }
+        caption{
+            text-align: center;
+            color:blue;
+            font-size:40px;
+        }
+        th{
+            border: 1px solid beige;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <caption>豆瓣Top250</caption>
+        </tr>
+        <tr>
+           <th>排名</th>
+           <th>电影名</th>
+           <th>港台地区电影名</th>
+           <th>导演</th>
+           <th>上映年份</th>
+           <th>所在地</th>
+           <th>影片类型</th>
+           <th>豆瓣推荐语</th>
+        </tr> 
+        {% for dou in content %}
+        <tr>
+        <th>{{dou.id}}</th>
+        <th>{{dou.d_name}}</th>
+        <th>{{dou.d_other}}</th>
+        <th>{{dou.d_direct}}</th>
+        <th>{{dou.d_year}}</th>
+        <th>{{dou.d_from}}</th>
+        <th>{{dou.d_type}}</th>
+        <th>{{dou.d_content}}</th>
+    </tr> 
+    {% endfor %}
+    </table>
+</body>
+</html>

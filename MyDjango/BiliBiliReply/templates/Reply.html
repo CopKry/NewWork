@@ -1,0 +1,45 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>webbug</title>
+    <style>
+        body{
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        caption{
+            color:cornflowerblue;
+            font-size:40px;
+            text-align:center;
+        }
+        th{
+            color: aliceblue;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body style="background-image: url({% static 'underone.jpg' %});">
+    <table>
+        <tr>
+            <caption>一人之下，第一季第一集，前五十页评论</caption>
+        </tr>
+        <tr>
+            <th>用户名</th>
+            <th>评论内容</th>
+            <th>楼层</th>
+            <th>评论时间</th>
+        </tr> 
+        {% for bili in content %}
+        <tr>
+         <th>{{bili.user}}</th>
+         <th>{{bili.reply}}</th>
+         <th>{{bili.floor}}</th>
+         <th>{{bili.time}}</th>
+     </tr> 
+     {% endfor %}
+     </table>
+</body>
+</html>

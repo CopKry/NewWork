@@ -10,7 +10,7 @@ from PIL import Image
 #输入账号及密码
 def put_message():
     driver.find_element_by_xpath("//div[@class='login-account']/div/input").send_keys('18815119265')
-    driver.find_element_by_xpath("//div[@class='login-account']/div[2]/input").send_keys('731180433a')
+    driver.find_element_by_xpath("//div[@class='login-account']/div[2]/input").send_keys('********')
     
 #进行图片验证,并且登陆
 def login():
